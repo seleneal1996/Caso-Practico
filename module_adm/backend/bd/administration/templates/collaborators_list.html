@@ -1,0 +1,18 @@
+<!-- collaborators_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Colaboradores</title>
+</head>
+<body>
+    <h1>Lista de Colaboradores</h1>
+    <ul>
+        {% for collaborator in collaborators %}
+            <li>ID: {{ collaborator.id_colaborador }}, Nombre: {{ collaborator.nombre }}, Apellido: {{ collaborator.apellido }}, DNI: {{ collaborator.dni }}, Estado: {{ collaborator.estado }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

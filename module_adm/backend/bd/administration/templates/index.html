@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endpoints</title>
+</head>
+<body>
+    <h1>Endpoints</h1>
+    <ul id="endpoint-list">
+        <!-- Aquí se mostrarán los endpoints -->
+    </ul>
+
+    <script>
+        // Función para cargar los endpoints
+        function loadEndpoints() {
+            fetch('/collaborators/')  
+                .then(response => response.json())
+                .then(data => {
+                    const endpointList = document.getElementById('endpoint-list');
+                    data.forEach(endpoint => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${endpoint.method}: ${endpoint.name}`;
+                        endpointList.appendChild(listItem);
+                    });
+                })
+                .catch(error => console.error('Error al obtener los endpoints:', error));
+        }
+
+        // Cargar los endpoints cuando la página se cargue completamente
+        document.addEventListener('DOMContentLoaded', loadEndpoints);
+    </script>
+</body>
+</html>
