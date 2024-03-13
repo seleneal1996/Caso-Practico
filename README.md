@@ -21,9 +21,4 @@ Este repositorio contiene un módulo administrativo desarrollado con Django para
 - **Frontend**: Implementado con React, una biblioteca de JavaScript para construir interfaces de usuario interactivas y de una sola página (SPA).
 - **Base de Datos**: Se utiliza una base de datos relacional, preferiblemente MySQL o PostgreSQL, para almacenar los datos de los colaboradores.
 
-## Configuración del Entorno de Desarrollo
 
-1. **Clonar el Repositorio**: Clona el repositorio del proyecto desde GitHub:
-
-```bash
-git clone https://github.com/tu-usuario/modulo-administrativo.git
